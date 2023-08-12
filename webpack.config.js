@@ -25,13 +25,20 @@ module.exports = {
       { test: /\.html$/, use: ["html-loader"] },
       { test: /\.s?css$/, use: [MiniCssExtractPlugin.loader, "css-loader"] },
       {
-        test: /\.(png|jpg|gif|svg|)$/i,
+        test: /\.(png|jpg|gif|)$/i,
         type: "asset/resource",
       },
 
-      ,
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "fonts",
+        },
+      },
     ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: "ToDo List App",

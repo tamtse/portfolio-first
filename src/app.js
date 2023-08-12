@@ -1,8 +1,12 @@
-import { Projects } from "./assets/images/index.js";
+import { Projects, profileOne } from "./assets/images/index.js";
+import IconGit from "../github.svg";
+import IconTwit from "../twitter.svg";
 import "./css/style.css";
 
 class App {
   constructor() {
+    this._github = document.getElementById("img_github");
+    this._twitter = document.getElementById("img_twitter");
     this._render();
   }
 
@@ -11,23 +15,30 @@ class App {
       ".projects_area .projects_wrapper"
     );
 
+    const propTitle = document.querySelector(":root");
+
     Projects.map((item, index) => {
       const box = document.createElement("li");
       console.log(document.hasOwnProperty("createElement"));
       box.hover = item.hover;
       box.className = item.hover ? "box_project shadow" : "box_project";
+      box.order = item.id;
 
       const imgProject = document.createElement("img");
       imgProject.className = "project_img";
       imgProject.alt = "project_src";
       imgProject.src = `${item.img}`;
 
+      const title = document.createElement("span");
+      title.className = "current_title";
+      title.innerText = `${item.title}`;
+
       box.appendChild(imgProject);
+      box.appendChild(title);
 
       const layer = document.createElement("div");
       layer.className = "overlap_content";
       layer.id = item.id;
-      /* layer.style.visibility = item.hover ? "visible" : "hidden"; */
 
       layer.innerHTML = `
      <span class="title_pro">${item.title}</span>
@@ -62,8 +73,35 @@ class App {
     linkLive.className = "live_url"; */
   }
 
+  _displayMediaImg() {
+    const imgOne = document.createElement("img");
+    const imgTwo = document.createElement("img");
+
+    imgOne.src = `${IconGit}`;
+    imgTwo.src = `${IconTwit}`;
+
+    this._github.appendChild(imgOne);
+    this._twitter.appendChild(imgTwo);
+  }
+
+  _displayMobProfile() {
+    const wrapper = document.querySelector(".picture_img_mobile");
+
+    const img = document.createElement("img");
+    img.className = "rule_img_mob";
+
+    const imgb = document.createElement("img");
+    imgb.className = "rule_img_mob";
+
+    img.src = profileOne;
+
+    wrapper.appendChild(img);
+  }
+
   _render() {
     this._displayImagesProjects();
+    this._displayMediaImg();
+    this._displayMobProfile();
   }
 }
 

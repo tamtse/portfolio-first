@@ -3,6 +3,9 @@ import furniture from "./furniture.png";
 import quiz from "./quiz.png";
 import tracalories from "./tracalories.png";
 import todolist from "./todolist.png";
+import profileOne from "./picture-one.jpg";
+
+export { profileOne };
 
 export const Projects = [
   {
