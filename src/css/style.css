@@ -15,6 +15,24 @@ font-family: 'Titillium Web', sans-serif; */
   padding: 0;
 }
 
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 200px) {
   .picture_img {
     display: none;
@@ -35,7 +53,6 @@ font-family: 'Titillium Web', sans-serif; */
 
   .lab_ct {
     padding: 0.25rem 0;
-    /*  color: #4e4e4e; */
     color: #4d4b4b;
     font-family: "Roboto Serif", serif;
   }
@@ -48,18 +65,12 @@ font-family: 'Titillium Web', sans-serif; */
     padding: 0.25rem;
     width: 100vw;
     height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .review_content {
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .date,
@@ -101,9 +112,6 @@ font-family: 'Titillium Web', sans-serif; */
     position: relative;
     width: 100%;
     margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .my_name {
@@ -133,9 +141,6 @@ font-family: 'Titillium Web', sans-serif; */
     margin: 0 auto 0.5rem;
     border-radius: 50%;
     border: 2px solid brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .rule_img_mob {
@@ -150,14 +155,20 @@ font-family: 'Titillium Web', sans-serif; */
 
   .lift_intro {
     margin: 0 auto;
+    color: #250418;
+    color: #530335;
     font-size: 16px;
-    display: flex;
-    justify-content: center;
     text-align: center;
+    transition: all 0.65s ease-in-out;
+  }
+
+  .lift_intro:hover {
+    color: #333;
   }
 
   .room_quote {
     width: 100%;
+    height: 150px;
     margin: 0 auto;
     padding: 1.5rem 0 1rem;
     display: flex;
@@ -171,11 +182,24 @@ font-family: 'Titillium Web', sans-serif; */
     justify-content: center;
   }
 
+  .quote_highlighted {
+    font-size: 1rem;
+    padding: 0.25rem;
+    color: #fff;
+    background-color: #727070;
+  }
+
   .author {
     width: 100%;
     padding: 0.1rem 0;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .text_size {
+    max-width: 90%;
+    font-size: 0.9rem;
+    margin: 0 auto;
   }
 
   .card_interest {
@@ -188,25 +212,12 @@ font-family: 'Titillium Web', sans-serif; */
     align-items: center;
   }
 
-  /*  .card_interest {
-    width: 100%;
-    height: auto;
-    margin: 1.5rem 0 1rem;
-    display: flex;
-  } */
-
   .keen_interest {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
   }
 
   .legit_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: left;
     gap: 0.5rem;
   }
@@ -508,13 +519,98 @@ font-family: 'Titillium Web', sans-serif; */
 }
 
 @media (min-width: 736px) {
+  .picture_img_mobile {
+    display: none;
+  }
+
+  .lift_intro {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .label_quote {
+    color: #1f1b1b;
+    transform: skewX(10deg);
+    font-size: 1.1rem;
+  }
+
+  .quote_highlighted {
+    background-color: #302e2e;
+  }
+
+  .author {
+    position: relative;
+    left: 85%;
+    width: 15%;
+    padding: 0.1rem 0;
+    border-bottom: 1px solid green;
+    text-decoration: underline dotted brown;
+  }
+
   .entire_wrapper {
     width: 96%;
     margin: 0 auto;
   }
 
+  .card_interest {
+    margin: 0 0 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .picture_img {
+    position: relative;
+    width: 60%;
+    height: 276px;
+    border-radius: 5px;
+    border: 1px solid #b31919;
+    display: flex;
+  }
+
+  .picture_img::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .rule_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .keen_interest {
+    width: 40%;
+    height: 276px;
+    gap: 0.25rem;
+  }
+
+  .lab_ct {
+    color: #4d4b4b;
+    font-size: 0.8rem;
+  }
+
+  .label_interest,
+  .label_experience {
+    background-color: #eee;
+  }
+
+  .legit_story {
+    display: none;
+  }
+
   .card_projects_contacts {
     width: 100%;
+    margin-top: 1.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,9 +719,6 @@ font-family: 'Titillium Web', sans-serif; */
   }
 
   .live_url {
-    /* position: relative;
-    top: 2rem;
-    left: -2rem; */
     font-size: 16px;
     font-weight: bold;
     color: #f4f4f4;
@@ -643,8 +736,17 @@ font-family: 'Titillium Web', sans-serif; */
     transition: all 1s ease-in-out;
   }
 
+  .label_contact {
+    background-color: #7e7c7c;
+    transition: all 1s ease-in-out;
+  }
+
   .contact_zone:hover {
     background-color: #c0bcbc;
+  }
+
+  .contact_zone:hover .label_contact {
+    background-color: transparent;
   }
 }
 

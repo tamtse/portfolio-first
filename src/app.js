@@ -1,4 +1,6 @@
+import moment from "moment";
 import { Projects, profileOne } from "./assets/images/index.js";
+import { Quotes } from "./Quotes/Quotes.js";
 import IconGit from "../github.svg";
 import IconTwit from "../twitter.svg";
 import "./css/style.css";
@@ -7,7 +9,61 @@ class App {
   constructor() {
     this._github = document.getElementById("img_github");
     this._twitter = document.getElementById("img_twitter");
+    this._indexElt = 0;
+    this._roomQuote = document.querySelector(".room_quote");
+    this._firstQuote();
     this._render();
+
+    setInterval(this._displayQuote.bind(this), 12000);
+    this.keen = console.log(document.querySelector(".keen_interest"));
+  }
+
+  _quoteTransition() {
+    setTimeout(() => {
+      this._roomQuote.style.transition = `all 1s ease-in-out`;
+      this._roomQuote.style.opacity = 0.5;
+      this._roomQuote.innerHTML = "";
+    }, 1000);
+  }
+
+  _firstQuote() {
+    setTimeout(() => {
+      this._roomQuote.innerHTML = `<span class="label_quote">Quote :</span>
+            <div class="quote_frame">
+              <q id="0" class="quote_highlighted">
+                The Two Most Important Day In Your Life are the Day you are born
+                and the day you know why.</q
+              >
+              <span id="author_name" class="author"><i>Mark Twain</i></span>
+            </div>`;
+    }, 1000);
+  }
+
+  _displayQuote() {
+    this._indexElt += 1;
+    if (this._indexElt > 5) this._indexElt = 0;
+    for (let i = 0; i < 6; i++) {
+      if (i === this._indexElt) {
+        this._roomQuote.innerHTML = "";
+
+        const newQuote = Quotes[i];
+        const labelQuote = document.createElement("span");
+        labelQuote.className = "label_quote";
+        labelQuote.innerHTML = "Quote :";
+
+        this._roomQuote.appendChild(labelQuote);
+
+        const quoteBox = document.createElement("div");
+        quoteBox.className = "quote_frame";
+        quoteBox.innerHTML = `
+        <q id=${i} class="quote_highlighted">
+                ${newQuote.quote}</q
+              >
+              <span id="author_name" class="author"><i>${newQuote.author}</i></span>`;
+
+        this._roomQuote.appendChild(quoteBox);
+      }
+    }
   }
 
   _displayImagesProjects() {
@@ -90,18 +146,37 @@ class App {
     const img = document.createElement("img");
     img.className = "rule_img_mob";
 
-    const imgb = document.createElement("img");
-    imgb.className = "rule_img_mob";
+    img.src = profileOne;
+
+    wrapper.appendChild(img);
+  }
+
+  _displayDeskProfile() {
+    const wrapper = document.querySelector(".picture_img");
+
+    const img = document.createElement("img");
+    img.className = "rule_img";
 
     img.src = profileOne;
 
     wrapper.appendChild(img);
   }
 
+  _displayReviewDate() {
+    const day = document.querySelector(".current_day");
+    const date = document.querySelector(".current_date");
+    const week = document.querySelector(".week_count");
+    day.innerHTML = moment().format("ddd,");
+    date.innerHTML = moment().format("DD MMM");
+    week.innerHTML = moment().format("W");
+  }
+
   _render() {
     this._displayImagesProjects();
     this._displayMediaImg();
     this._displayMobProfile();
+    this._displayDeskProfile();
+    this._displayReviewDate();
   }
 }
 

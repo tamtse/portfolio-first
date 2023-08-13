@@ -14,8 +14,10 @@
   <body>
     <header>
       <nav id="welcome_date" class="review_date">
-        <div class="review_content">
-          <p id="date" class="date"><span>Thu,</span> <span>10 July</span></p>
+        <div class="review_content flex-between">
+          <p id="date" class="date">
+            <span class="current_day"></span> <span class="current_date"></span>
+          </p>
           <ul class="this_week">
             <li class="label_week">week</li>
             <li class="week_count">1</li>
@@ -25,95 +27,45 @@
     </header>
     <main id="main_resume" class="main_resume">
       <section class="entire_wrapper">
-        <div class="presentation">
+        <div class="presentation flex-column-center">
           <div class="about_me">
             <span class="my_name">NGOUEND RAOUL GERARD</span>
-            <div class="picture_img_mobile">
-              <!-- <img src="" class="rule_img_mob" alt="waiting image" /> -->
-            </div>
-            <p class="lift_intro">
+            <div class="picture_img_mobile flex-row-center"></div>
+            <p class="lift_intro flex-row-center">
               I'm a Front End Developer, carrying projects on React, Vanilla
               Javascript and currently TypeScript. Prioritizing mutual efforts
               and Team collaboration
             </p>
           </div>
-          <div class="room_quote">
-            <span class="label_quote">Quote:</span>
-            <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                The Two Most Important Day In Your Life are the Day you are born
-                and the day you know why.</q
-              >
-              <span id="author_name" class="author"><i>Mark Twain</i></span>
-            </div>
-            <!--  <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                Never give up on what you really want to do. The person with big
-                Dreams is more powerful than the one with all the Facts.
-              </q>
-              <span id="author_name" class="author">Albert EinsTein</span>
-            </div>
-            <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                It's not the Age that makes you Mature. It is the
-                Responsibility</q
-              >
-              <span id="author_name" class="author">Willing People</span>
-            </div>
-            <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                Worrying is a waste of Time. It doesn't change anything. It
-                messes with your mind and steal your Happinness.</q
-              >
-              <span id="author_name" class="author">Willing People</span>
-            </div>
-            <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                In the end, we will remember not the Words of our enemies but
-                the Silence of our friends.</q
-              >
-              <span id="author_name" class="author">Martin Luther King Jr</span>
-            </div>
-            <div class="quote_frame">
-              <q id="quote" class="quote_highlighted">
-                Always bear in mind that your own Resolution to succeed is more
-                important than any One thing</q
-              >
-              <span id="author_name" class="author"
-                ><i>Abraham Lincoln</i></span
-              >
-            </div> -->
-          </div>
+          <div class="room_quote"></div>
         </div>
         <div class="card_interest">
-          <div class="picture_img">
-            <!-- <img src="" class="rule_img" alt="waiting image" /> -->
-          </div>
-          <div class="keen_interest">
-            <div class="legit_content">
+          <div class="picture_img"></div>
+          <div class="keen_interest flex-column-center">
+            <div class="legit_content flex-column-center">
               <span class="label_interest lab_ct">INTEREST</span>
-              <p class="text_interest">
+              <p class="text_interest text_size">
                 Passionate of UI/UX Design, painting art, animes mangas and
                 Fighting Games.
               </p>
             </div>
-            <p class="carry_on">
-              currently Learning Typescript the verbose scene act relative to
+            <p class="carry_on text_size">
+              Currently Learning Typescript the verbose scene act relative to
               Javascript that have peculiarity to suit for large code base
               content creation.
             </p>
-            <div class="legit_content">
+            <div class="legit_content flex-column-center">
               <span class="label_experience lab_ct">EXPERIENCE</span>
               <ul class="board_exp">
-                <li class="experience">
+                <li class="experience text_size">
                   Three Years Graduate On Electrical engineering Field (I.U.T &
                   I.U.C Douala ) | Technical Electrothechnics Thirds Grade
                 </li>
               </ul>
             </div>
-            <div class="legit_content">
+            <div class="legit_content legit_story flex-column-center">
               <span class="label_my_story lab_ct">STORY</span>
-              <p class="back_in_time">
+              <p class="back_in_time text_size">
                 Over 10 Years struggling to find my means of living and a path
                 of growth in my last field. With some friends dive in front end
                 development and began my self taught journey over almost 02
@@ -131,36 +83,7 @@
         </div>
         <div class="card_projects_contacts">
           <div id="projects" class="projects_area">
-            <div class="projects_grid projects_wrapper snaps_inline">
-              <!-- <div class="box_project">
-                <img src="" class="project_img" alt="project_src" />
-                <div class="overlap_content">
-                  <span class="title_pro">Breakout Game</span>
-                  <div class="features_project">
-                    <span class="lab_ft">Features :</span>
-                    <ul class="list_features">
-                      <li class="feature">Move Paddle Right and Left</li>
-                      <li class="feature">Move Ball</li>
-                      <li class="feature">Break Bricks</li>
-                    </ul>
-                    <div class="link_field">
-                      <div class="mini_content">
-                        <img
-                          id="breakout"
-                          src=""
-                          class="mini_img"
-                          alt="mini opps "
-                        />
-                        <a href="" class="live_url" target="_blank">
-                          Live Url
-                          <span class="bubble" style="color: aliceblue"></span
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
+            <div class="projects_grid projects_wrapper snaps_inline"></div>
           </div>
           <div id="contacts" class="contact_zone">
             <span class="label_contact lab_ct">CONTACTS</span>
@@ -178,10 +101,6 @@
           </div>
         </div>
       </section>
-      <!-- <section id="presentation" class="heading_specs">
-        <div class="presentation_grid"></div>
-      </section>
-      <section id="projects_contacts" class="skills_labour"></section> -->
     </main>
   </body>
 </html>
