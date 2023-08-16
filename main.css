@@ -18,6 +18,9 @@ font-family: 'Titillium Web', sans-serif; */
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -786,6 +789,28 @@ font-family: 'Titillium Web', sans-serif; */
   .link_field {
     padding-block: 0rem;
     justify-content: center;
+  }
+
+  .keen_interest {
+    height: 320px;
+  }
+
+  .picture_img {
+    height: 320px;
+  }
+
+  .card_projects_contacts {
+    margin: 1.5rem 0 1.5rem;
+  }
+
+  .projects_area {
+    width: 70%;
+    height: 360px;
+  }
+
+  .contact_zone {
+    width: 30%;
+    height: 360px;
   }
 }
 
