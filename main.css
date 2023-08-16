@@ -158,9 +158,9 @@ font-family: 'Titillium Web', sans-serif; */
 
   .lift_intro {
     margin: 0 auto;
-    color: #250418;
-    color: #530335;
+    color: #333;
     font-size: 16px;
+    font-weight: bold;
     text-align: center;
     transition: all 0.65s ease-in-out;
   }
@@ -459,7 +459,7 @@ font-family: 'Titillium Web', sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4.4rem;
+    gap: 1.6rem;
   }
 
   .medias_account .media {
@@ -750,6 +750,11 @@ font-family: 'Titillium Web', sans-serif; */
 
   .contact_zone:hover .label_contact {
     background-color: transparent;
+  }
+
+  .medias_account {
+    padding: 1.5rem 0 0;
+    gap: 1.6em;
   }
 }
 
