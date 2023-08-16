@@ -7,7 +7,6 @@ import profileOne from "./pictureF.jpg";
 import profileTwo from "./pictureG.jpg";
 import bubbleOne from "./bubble1.jpg";
 import bubbleTwo from "./bubble2.jpg";
-
 export { profileOne, profileTwo, bubbleOne, bubbleTwo };
 
 export const Projects = [
@@ -21,8 +20,7 @@ export const Projects = [
       three: "Individual/total Price of each Items",
     },
     bulbColor: "#ffa52f",
-    linkLive: "",
-    hover: false,
+    linkLive: "https://github.com/BeinRain06/furniture-store.git",
   },
 
   {
@@ -35,8 +33,7 @@ export const Projects = [
       three: "Break Bricks",
     },
     bulbColor: "#664cd6",
-    linkLive: "",
-    hover: false,
+    linkLive: "https://github.com/BeinRain06/breakout-game.git",
   },
   {
     id: "2",
@@ -48,8 +45,7 @@ export const Projects = [
       three: "Show Resume Correct Answers",
     },
     bulbColor: "#d64c6a",
-    linkLive: "",
-    hover: false,
+    linkLive: "https://github.com/BeinRain06/quiz-app.git",
   },
 
   {
@@ -62,8 +58,7 @@ export const Projects = [
       three: "Show Total Calories remaining",
     },
     bulbColor: "#57103c",
-    linkLive: "",
-    hover: false,
+    linkLive: "https://github.com/BeinRain06/tracalorie-app.git",
   },
 
   {
@@ -76,7 +71,6 @@ export const Projects = [
       three: "Set Priority for Tasks",
     },
     bulbColor: "#fcff36",
-    linkLive: "",
-    hover: false,
+    linkLive: "https://github.com/BeinRain06/To-Do-List.git",
   },
 ];

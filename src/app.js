@@ -120,9 +120,8 @@ class App {
                           class="mini_img"
                           alt="mini opps "
                         />
-                        <a href="" class="live_url" target="_blank">
-                          Live URL <span class="bubble" style="color: ${item.bulbColor}"></span
-                        ></a>
+                        <a href=${item.linkLive} class="live_url" target="_blank">
+                          Live URL</a>
                       </div>
                     </div>
                   </div>`;
