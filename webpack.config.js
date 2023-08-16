@@ -36,6 +36,10 @@ module.exports = {
           outputPath: "fonts",
         },
       },
+      {
+        test: /\.jpg/,
+        type: "asset/inline",
+      },
     ],
   },
 

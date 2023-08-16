@@ -3,9 +3,12 @@ import furniture from "./furniture.png";
 import quiz from "./quiz.png";
 import tracalories from "./tracalories.png";
 import todolist from "./todolist.png";
-import profileOne from "./picture-one.jpg";
+import profileOne from "./pictureF.jpg";
+import profileTwo from "./pictureG.jpg";
+import bubbleOne from "./bubble1.jpg";
+import bubbleTwo from "./bubble2.jpg";
 
-export { profileOne };
+export { profileOne, profileTwo, bubbleOne, bubbleTwo };
 
 export const Projects = [
   {

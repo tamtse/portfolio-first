@@ -1,13 +1,20 @@
 import moment from "moment";
-import { Projects, profileOne } from "./assets/images/index.js";
+import {
+  Projects,
+  profileOne,
+  profileTwo,
+  bubbleOne,
+} from "./assets/images/index.js";
 import { Quotes } from "./Quotes/Quotes.js";
 import IconGit from "../github.svg";
 import IconTwit from "../twitter.svg";
+import IconLinkedIn from "../linkedin.svg";
 import "./css/style.css";
 
 class App {
   constructor() {
     this._github = document.getElementById("img_github");
+    this._linkedIn = document.getElementById("img_linkedin");
     this._twitter = document.getElementById("img_twitter");
     this._indexElt = 0;
     this._roomQuote = document.querySelector(".room_quote");
@@ -124,20 +131,26 @@ class App {
 
       cardProjects.appendChild(box);
     });
+  }
 
-    /* linkLive = document.createElement("a");
-    linkLive.className = "live_url"; */
+  _displayProBackground() {
+    const about = document.getElementById("about_me");
+
+    /*  about.style.background = `url(${bubbleOne})`; */
   }
 
   _displayMediaImg() {
     const imgOne = document.createElement("img");
     const imgTwo = document.createElement("img");
+    const imgThree = document.createElement("img");
 
     imgOne.src = `${IconGit}`;
     imgTwo.src = `${IconTwit}`;
+    imgThree.src = `${IconLinkedIn}`;
 
     this._github.appendChild(imgOne);
     this._twitter.appendChild(imgTwo);
+    this._linkedIn.appendChild(imgThree);
   }
 
   _displayMobProfile() {
@@ -146,7 +159,7 @@ class App {
     const img = document.createElement("img");
     img.className = "rule_img_mob";
 
-    img.src = profileOne;
+    img.src = profileTwo;
 
     wrapper.appendChild(img);
   }
@@ -172,6 +185,7 @@ class App {
   }
 
   _render() {
+    this._displayProBackground();
     this._displayImagesProjects();
     this._displayMediaImg();
     this._displayMobProfile();
